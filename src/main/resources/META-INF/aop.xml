@@ -1,0 +1,23 @@
+<aspectj>
+
+    <aspects>
+        <!-- declare two existing aspects to the weaver -->
+        <aspect name="cz.egje.datechange.DateChange" />
+
+        <!-- Of the set of aspects declared to the weaver use aspects matching the type pattern "com..*" for weaving. -->
+        <!-- 
+        <include within="cz..*" />
+        <include within="com..*" />
+         -->
+
+    </aspects>
+
+    <weaver options="-nowarn -Xlint:ignore -warn:none">
+        <!-- Weave types that are within the javax.* or org.aspectj.* packages. Also weave all types in the foo package that do not have the @NoWeave annotation. -->
+        <!-- 
+        <include within="cz.*" />
+        <include within="com.*" />
+         -->
+    </weaver>
+
+</aspectj>
